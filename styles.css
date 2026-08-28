@@ -46,9 +46,6 @@ main {
     width: 90%;
     margin: auto;
   }
-  .portfolio {
-    margin: auto;
-  }
 }
 
 @media screen and (max-width: 300) {
