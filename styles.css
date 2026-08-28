@@ -23,10 +23,10 @@ body {
 
 main {
   flex: 1;
+  width: 100%;
 }
 
 .portfolio {
-  margin: auto;
   padding: 0.5rem;
   background-color: #fff0ce;
   filter: drop-shadow(0 0 0.25rem black);
@@ -37,19 +37,16 @@ main {
 }
 
 @media screen and (max-width: 1000px) {
-  .portfolio {
-    width: 100%;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 500px) {
   body {
     width: 100%;
     padding: 0.5rem;
   }
+
+  main {
+    width: 90%;
+    margin: auto;
+  }
   .portfolio {
-    width: 80%;
     margin: auto;
   }
 }
