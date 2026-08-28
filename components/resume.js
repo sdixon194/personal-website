@@ -5,7 +5,11 @@ resumeTemplate.innerHTML = `
     margin-top: 0.5rem;
   }
   .resume-head {
-    line-height: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: baseline;
+    line-height: 1.5rem;
   }
   .resume-component {
     background-color: #fff0ce;
@@ -13,10 +17,13 @@ resumeTemplate.innerHTML = `
     padding: 0.5rem;
     filter: drop-shadow(0 0 0.25rem black);
   }
+  .resume-component h4 {
+    margin: 0;
+  }
 </style>
 
 <div class="resume-component">
-  <div class="resume-head" style="display: flex; flex-wrap: wrap; gap: 10px; align-items:baseline;">
+  <div class="resume-head">
       <h4><slot name="job-title">Software Engineer</slot></h4>
       <span>//</span>
       <slot name="date-range">2025-2026</slot>
