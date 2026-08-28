@@ -19,11 +19,11 @@ body {
   display: flex;
   flex-direction: column;
   background-size: cover;
+  max-width: 2000px;
 }
 
 main {
   flex: 1;
-  width: 100%;
 }
 
 .portfolio {
@@ -52,4 +52,9 @@ main {
   html {
     font-size: 0.8rem;
   }
+}
+
+.video-container {
+  max-width: 1000px;
+  margin: auto;
 }
