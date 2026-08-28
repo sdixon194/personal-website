@@ -5,7 +5,6 @@ html {
 }
 html,
 body {
-  padding: 0 10px;
   height: 100%;
 }
 a {
@@ -37,6 +36,12 @@ main {
   margin-top: 0.25rem;
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    padding: 0.25rem;
+  }
+}
 @media screen and (max-width: 1000px) {
   .portfolio {
     width: 100%;

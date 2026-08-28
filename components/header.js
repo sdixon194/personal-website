@@ -5,6 +5,7 @@ headerTemplate.innerHTML = `
 
   header {
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     justify-content: space-between;
@@ -47,6 +48,7 @@ headerTemplate.innerHTML = `
   .menu li {
     margin: 0.5rem;
   }
+
   .social {
     flex: 1;
     display: flex;
@@ -63,6 +65,11 @@ headerTemplate.innerHTML = `
     text-transform: uppercase;
     }
 
+  @media screen and (max-width: 1000px) {
+    header {
+    flex-direction: column;
+    }
+}
   </style>
   <header>
     <div class="logo">
