@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+    <title>Steve Dixon</title>
+  </head>
+  <style>
+    .random-photo img {
+      filter: drop-shadow(0 0 0.25rem black);
+    }
+    .random-photo figcaption {
+      font-style: italic;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <header-component></header-component>
+    <main>
+      <p>Hey, my name is Steve and this is my place on the internet.</p>
+      <div class="home-section">
+        <div class="random-photo" id="random-photo"></div>
+      </div>
+    </main>
+    <footer-component></footer-component>
+  </body>
+  <script>
+    function getRandomPhoto() {
+      const photo_array = [
+        {
+          path: "cardinal.jpg",
+          alt: "A bright red male cardinal in the white snow",
+          caption: "Cardinal in our backyard",
+        },
+        {
+          path: "grackles.jpg",
+          alt: "A handful of grackles in a leafless tree ",
+          caption: "Scheming in a tree",
+        },
+        {
+          path: "starlings.jpg",
+          alt: "Starlings in a tree",
+          caption: "Starling swarm",
+        },
+        {
+          path: "taipei-alley.jpg",
+          alt: "A rainy alley in Jiufen, Taiwan with umbrellas and street vendors below and industrial air conditioning and buildings above",
+          caption: "Jiufen, Taiwan",
+        },
+        {
+          path: "taipei-lanterns.jpg",
+          alt: "Four bright red Chinese lanterns against a dark blue sky.",
+          caption: "Lanterns in Jiufen",
+        },
+        {
+          path: "titmouse.jpg",
+          alt: "A round titmouse holding a seed on a tree branch in the winter looking directly at the camera",
+          caption: "Looking back at me",
+        },
+      ];
+      const random_photo =
+        photo_array[Math.floor(Math.random() * photo_array.length)];
+      const figure = document.createElement("figure");
+      const image = document.createElement("img");
+      image.setAttribute("src", `/photos/${random_photo.path}`);
+      image.setAttribute("width", "100%");
+      image.setAttribute("alt", random_photo.alt);
+      const figcaption = document.createElement("figcaption");
+      figcaption.innerHTML = random_photo.caption;
+      figure.appendChild(image);
+      figure.appendChild(figcaption);
+      document.getElementById("random-photo").appendChild(figure);
+    }
+    getRandomPhoto();
+  </script>
+</html>

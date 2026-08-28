@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="/components/header.js" type="text/javascript" defer></script>
+    <script src="/components/resume.js" type="text/javascript" defer></script>
+    <script src="/components/footer.js" type="text/javascript" defer></script>
+    <title>Steve's Portfolio</title>
+  </head>
+  <body>
+    <header-component></header-component>
+    <main>
+      <h1>Resume</h1>
+      <div>
+        <h2 class="work-experience">Work Experience</h2>
+        <h3>Vimeo</h3>
+        <resume-component>
+          <span slot="job-title">Software Engineer III, Trust and Safety</span>
+          <span slot="date-range">April 2025 - April 2026</span>
+          <span slot="paragraph-description">
+            Full-stack software engineer working within multiple codebases,
+            including legacy PHP core app, Go microservices, Kubernetes and
+            Terraform instances in order to:
+          </span>
+          <ul slot="bulleted-description">
+            <li>Maintain video flagging and moderation infrastructure.</li>
+            <li>
+              Conduct routine maintenance and data gathering tasks via PHP and
+              Python scripts.
+            </li>
+            <li>
+              Integrate third party moderation tool Cinder to improve moderation
+              workflow and response times.
+            </li>
+            <li>
+              Work across legal and compliance teams to maintain DSA, GDPR, and
+              other regulatory agency compliance.
+            </li>
+            <li>
+              Stand up and maintain microservices such as Hive Visual Moderation
+              LLM classifiers and hash matchers in Google Kubernetes Engine.
+            </li>
+            <li>
+              Lead weekly developer training focused on data structure and
+              algorithms, technology trends, and developing team leadership
+              skills.
+            </li>
+          </ul>
+          <div slot="key-project">
+            <p>
+              <span style="font-weight: bold">Key Project:</span>
+              Roadmapped and implemented ThreatExchange via
+              Hasher-Matcher-Actioner (HMA), an open source moderation tool;
+              expanded internal API to match MD5 hashes of newly uploaded videos
+              against Global Internet Forum to Counter Terrorism (GIFCT)
+              database to automatically flag content for moderators; improved
+              proactive detection and removal of known violative content.
+            </p>
+            <p>
+              <span style="font-weight: bold">Key Project:</span>
+              Integrated new API changes to migrate usage of the Digital
+              Services Act (DSA) Statement of Reasons API to Version 2 on a
+              tight timeline, ensuring continuous compliance with DSA SOR
+              submissions with no downtime.
+            </p>
+          </div>
+        </resume-component>
+        <h3>Automattic</h3>
+        <resume-component>
+          <span slot="job-title">Software Engineer, Trust and Safety</span>
+          <p slot="date-range">April 2024 - April 2025</p>
+          <span slot="paragraph-description">
+            Worked within large legacy code bases across Automattic's products,
+            including Tumblr and WordPress.com, to:
+          </span>
+          <ul slot="bulleted-description">
+            <li>
+              Develop React-based internal moderation tool for Tumblr and
+              WordPress.com which handled hundreds of reports each day.
+            </li>
+            <li>
+              Extend and write new API endpoints and extend backup systems used
+              for account preservation.
+            </li>
+          </ul>
+          <div slot="key-project">
+            <p>
+              <span style="font-weight: bold">Key Project:</span>
+              Process to send child abuse material to the National Center for
+              Missing & Exploited Children (NCMEC) was inefficient because
+              reports required full Tumblr blog backups; extended legacy back-up
+              system by creating new API endpoint that allowed direct messages
+              to be exported to secure Amazon S3 bucket; managed front-end
+              changes (in React.js) enabling reviewers to create secure back-up
+              from direct messages instead of entire blog backup; new back-up
+              method now embedded in existing system, saving reviewers hours on
+              each NCMEC report.
+            </p>
+          </div>
+        </resume-component>
+        <resume-component>
+          <span slot="job-title">
+            Engineering Manager, WordPress Plugin "Jetpack"
+          </span>
+          <span slot="date-range">May 2023 - March 2025</span>
+          <span slot="paragraph-description">
+            Led team of five software engineers working on infrastructure for
+            Jetpack’s suite of plugins in an open source WordPress plugin
+            monorepo.
+          </span>
+          <ul slot="bulleted-description">
+            <li>
+              Planned and led large-scale infrastructure project that reduced
+              code and deployment duplication ensuring feature and dependency
+              parity across platforms.
+            </li>
+            <li>Supported two developer apprentices through graduation.</li>
+          </ul>
+          <div slot="key-project">
+            <p>
+              <span style="font-weight: bold">Key Project:</span>
+              Led team of software engineers to achieve code parity between
+              Jetpack and Wordpress.com to resolve broken code, reduce
+              development overhead, and eliminate feature differences between
+              platforms; in 3 months, synchronized files and consolidated
+              duplicate code, streamlining workflow and improving developer
+              experience.
+            </p>
+          </div>
+        </resume-component>
+        <resume-component>
+          <span slot="job-title">
+            Software Engineer, WordPress Plugin "Jetpack"
+          </span>
+          <span slot="date-range">January 2021 - May 2023</span>
+          <span slot="paragraph-description">
+            Developed infrastructure and handled dependency management for
+            Jetpack’s monorepo.
+          </span>
+          <ul slot="bulleted-description">
+            <li>
+              Wrote Bash and Node.js scripts creating single-command repository
+              set-up and installation process, automated changelog management
+              while creating and setting up internal PHP/JS packages.
+            </li>
+            <li>
+              Updated plugin release process which increased rate of shipped
+              code in division from weekly releases to continuous delivery;
+              improved deployment monitoring via Slack.
+            </li>
+          </ul>
+          <div slot="key-project">
+            <p>
+              <span style="font-weight: bold">Key Project:</span>
+              Increased rate of Jetpack deployment to flagship platform by
+              leading overhaul of release process to automate TeamCity build job
+              on each pull request; once built, developers could run a single
+              command to deploy code; this resulted in continuous (vs. monthly)
+              deployment of Jetpack, leading to increased developer velocity and
+              customer satisfaction.
+            </p>
+            <p>
+              <span style="font-weight: bold">Key Project:</span>
+              Jetpack monorepo had many projects that used different versioning
+              systems that resulted in messy changelog entries for software
+              releases; based on feedback from engineers, led project that
+              automated changelog creation on a pre-commit hook via interactive
+              command line tool, increasing proper changelog usage across teams
+              and improving both developer and release manager efficiency.
+            </p>
+          </div>
+        </resume-component>
+        <resume-component>
+          <span slot="job-title">
+            Technical Customer Support, WordPress.com
+          </span>
+          <span slot="date-range">November 2017 - December 2020</span>
+          <span slot="paragraph-description"
+            >Handled hundreds of customer support requests monthly from
+            WordPress.com users via live chat, email ticketing and video
+            calls.</span
+          >
+          <ul slot="bulleted-description">
+            <li>
+              Led in-person workshops to train users in HTML/CSS and
+              accessibility.
+            </li>
+            <li>
+              Developed Zendesk ticket integration by surfacing more relevant
+              site information for support engineers.
+            </li>
+          </ul>
+        </resume-component>
+        <h3>Museum of Modern Art (MoMA)</h3>
+        <resume-component>
+          <span slot="job-title">Film Desk Guest Specialist</span>
+          <span slot="date-range">May 2016 - November 2017</span>
+          <span slot="paragraph-description"
+            >Handled hundreds of customer support requests monthly from
+            WordPress.com users via live chat, email ticketing and video
+            calls.</span
+          >
+          <ul slot="bulleted-description">
+            <li>
+              Led in-person workshops to train users in HTML/CSS and
+              accessibility.
+            </li>
+            <li>
+              Developed Zendesk ticket integration by surfacing more relevant
+              site information for support engineers.
+            </li>
+          </ul>
+        </resume-component>
+        <h3>Independent Contract Work</h3>
+        <resume-component>
+          <span slot="job-title">Content Specialist</span>
+          <span slot="date-range">May 2013 - May 2016</span>
+          <span slot="paragraph-description"
+            >Worked as a content creator for various industries, spanning video
+            creation and technical writing.</span
+          >
+          <ul slot="bulleted-description">
+            <li>
+              Produced, directed, and edited videos to showcase real estate
+              agent profiles and property listings.
+            </li>
+            <li>
+              Wrote in depth blog posts for various clients, from a technical
+              structural glass company to street wear clothing brands.
+            </li>
+            <li>
+              Created copy and images for daily social media posts across client
+              portfolio.
+            </li>
+          </ul>
+        </resume-component>
+        <h2 class="play-experience">Extracurricular Experience</h2>
+        <h3>Hudson Valley Mahjong Club</h3>
+        <resume-component>
+          <span slot="job-title">Instructor, Manager</span>
+          <span slot="date-range">June 2026 - Present</span>
+          <span slot="paragraph-description"
+            >Help manage a local community mahjong club where people get
+            together to learn how to play and build community twice a month.
+            Instruct new people looking to learn as well as guide and answer
+            questions throughout the event. Manage the club's website,
+            newsletter, and help moderate the Discord community.</span
+          >
+        </resume-component>
+        <h3>Metro Mage Games</h3>
+        <resume-component>
+          <span slot="job-title"
+            >Build a Board Game in Two Hours Meetup Group</span
+          >
+          <span slot="date-range">May 2018 - April 2020</span>
+          <span slot="paragraph-description"
+            >Managed a Meetup.com group in NYC that ran various tabletop game
+            workshops. The monthly flagship "Build a Board Game in Two Hours"
+            event would bring in groups of 10-20 people to come up with, design,
+            build, and iterate on a random theme all within the time limit.
+            Metro Mage Games also ran playtest sessions for game designers and
+            hosted casual co-designing sessions.
+          </span>
+        </resume-component>
+      </div>
+    </main>
+    <footer-component></footer-component>
+  </body>
+</html>

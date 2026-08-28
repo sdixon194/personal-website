@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/components/header.js" type="text/javascript" defer></script>
+    <script
+      src="/components/portfolio-card.js"
+      type="text/javascript"
+      defer
+    ></script>
+    <script src="/components/footer.js" type="text/javascript" defer></script>
+    <title>Steve Dixon</title>
+  </head>
+  <style>
+    .portfolio-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding: var(1rem);
+      max-width: 100%;
+    }
+
+    .portfolio-container a.card-link {
+      display: block;
+      z-index: 1;
+    }
+
+    .portfolio-container a.card-link::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: " ";
+    }
+    .portfolio-container img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+  <body>
+    <header-component></header-component>
+    <main>
+      <h1>Portfolio</h1>
+      <div class="portfolio-container">
+        <card-component>
+          <img slot="image" src="/portfolio/images/leaderboard.png" />
+          <h2 slot="title">Leaderboard Application (WIP)</h2>
+          <p class="description" slot="description">
+            WIP pre-alpha version of a self-hostable leaderboard score keeping
+            site for comparing video game scores with your friends, built in
+            Next.js.
+          </p>
+          <p slot="type">Programming // 2026</p>
+          <a slot="link" href="/portfolio/leaderboard" class="card-link"></a>
+        </card-component>
+        <card-component>
+          <img slot="image" src="/portfolio/images/cryptet.png" />
+          <h2 slot="title">Cryptet</h2>
+          <p slot="description">
+            Video production for Cryptet, a string quintet that plays their own
+            arrangements of video game music.
+          </p>
+          <p slot="type">Video Production // 2026</p>
+          <a slot="link" href="/portfolio/cryptet" class="card-link"></a>
+        </card-component>
+        <card-component>
+          <img slot="image" src="/portfolio/images/thracia.jpg" />
+          <h2 slot="title">Thracia 776 Translated Cart</h2>
+          <p slot="description">
+            Building a SNES cartridge from electronic components to hold a fan
+            translated copy of a Japanese-only Fire Emblem: Thracia 776.
+          </p>
+          <p slot="type">Electronics // 2025</p>
+          <a
+            slot="link"
+            href="/portfolio/thracia-cartridge"
+            class="card-link"
+          ></a>
+        </card-component>
+        <card-component>
+          <img slot="image" src="/portfolio/images/titmouse-bounce.png" />
+          <h2 slot="title">Titmouse Bounce</h2>
+          <p slot="description">
+            Web based game built in Godot where you play as a titmouse trying to
+            collect as many seeds as possible.
+          </p>
+          <p slot="type">Video Games // 2025</p>
+          <a
+            slot="link"
+            href="/portfolio/titmouse-bounce"
+            class="card-link"
+          ></a>
+        </card-component>
+        <card-component>
+          <img slot="image" src="/portfolio/images/biography-undead.png" />
+          <h2 slot="title">"Biography of the Chosen Undead"</h2>
+          <p slot="description">
+            Mockumentary style winner of the Bandai-Namco video competition for
+            catching players up on the lore of Dark Souls 1 and 2 before the
+            release of the third entry.
+          </p>
+          <p slot="type">Video Production // 2016</p>
+          <a slot="link" href="/portfolio/dark-souls" class="card-link"></a>
+        </card-component>
+      </div>
+    </main>
+    <footer-component></footer-component>
+  </body>
+</html>

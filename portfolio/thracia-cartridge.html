@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+U:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../components/header.js" type="text/javascript" defer></script>
+    <script src="../components/footer.js" type="text/javascript" defer></script>
+    <title>Steve's Portfolio</title>
+  </head>
+  <style>
+    img {
+      object-fit: cover;
+    }
+  </style>
+  <body>
+    <header-component></header-component>
+    <main>
+      <div class="portfolio">
+        <h1>Thracia 776 Translated Cart</h1>
+        <img width="100%" height="auto" src="/portfolio/images/thracia.jpg" />
+        <p>
+          <i>Fire Emblem: Thracia 776</i> is a <i>Fire Emblem</i> game for
+          Nintendo's Super Nintendo that was only released in Japan, never
+          receiving an English translation. However, there are fan translations
+          that you can patch a ROM with. For Christmas 2025, I thought it would
+          be a fun idea to put a translated copy of the game on a physical SNES
+          cart for my wife, who is a huge Fire Emblem fan, so she could play the
+          game on original hardware.
+        </p>
+        <p>
+          This proved to be a much larger project than anticipated, as I
+          discovered there's a lot more to having a patched game run on original
+          hardware than just flashing an old SNES cart. Using a
+          <a
+            href="https://mousebitelabs.com/2017/09/14/how-to-make-a-snes-reproduction-cartridge/"
+            targe="_blank"
+          >
+            guide I found from Mouse Bite Labs</a
+          >, I obtained all the parts for building a cart from scratch (PCB
+          board, EPROMs, SRAM, various resistors, transistors and ancillary
+          chips) and the hardware needed to write to program the EPROMs, as well
+          as a cart shell and label. I stealthily spent a month soldering
+          together a test board to ensure the EPROM programming worked, before
+          building the final cart and affixing everything.
+        </p>
+        <p>
+          My wife spent many hours playing what I understand to be one of the
+          hardest Fire Emblem games you can play on our SNES. Merry Christmas!
+        </p>
+        <p>And it worked!</p>
+        <img width="100%" height="auto" src="/portfolio/images/thracia-2.jpg" />
+        <p>No generative AI/LLMs were used or consulted for this project.</p>
+      </div>
+    </main>
+    <footer-component></footer-component>
+  </body>
+</html>
