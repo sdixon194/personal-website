@@ -27,6 +27,17 @@
     .random-photo figure {
       margin: 0;
     }
+
+    .random-button {
+      border: none;
+      filter: drop-shadow(0 0 0.25rem black);
+      background-color: #9ca6ab;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      padding: 0.25rem;
+    }
   </style>
   <body>
     <header-component></header-component>
@@ -35,26 +46,33 @@
         <p>Hey, my name is Steve and this is my place on the internet.</p>
         <div class="random-photo" id="random-photo"></div>
       </div>
+      <button
+        class="random-button"
+        id="random-photo-button"
+        onClick="getRandomPhoto()"
+      >
+        Roll a random photo
+      </button>
     </main>
     <footer-component></footer-component>
   </body>
   <script>
     function getRandomPhoto() {
-      const photo_array = [
+      const photoArray = [
         {
           path: "cardinal.jpg",
           alt: "A bright red male cardinal in the white snow",
-          caption: "Cardinal in our backyard",
+          caption: "Crest",
         },
         {
           path: "grackles.jpg",
           alt: "A handful of grackles in a leafless tree ",
-          caption: "Scheming in a tree",
+          caption: "Scheming",
         },
         {
           path: "starlings.jpg",
           alt: "Starlings in a tree",
-          caption: "Starling swarm",
+          caption: "Winter",
         },
         {
           path: "taipei-alley.jpg",
@@ -97,18 +115,22 @@
           caption: "Seabird",
         },
       ];
-      const random_photo =
-        photo_array[Math.floor(Math.random() * photo_array.length)];
+      const photoElement = document.getElementById("random-photo");
+      while (photoElement.firstChild) {
+        photoElement.removeChild(photoElement.firstChild);
+      }
+      const randomPhoto =
+        photoArray[Math.floor(Math.random() * photoArray.length)];
       const figure = document.createElement("figure");
       const image = document.createElement("img");
-      image.setAttribute("src", `/photos/${random_photo.path}`);
+      image.setAttribute("src", `/photos/${randomPhoto.path}`);
       image.setAttribute("width", "100%");
-      image.setAttribute("alt", random_photo.alt);
+      image.setAttribute("alt", randomPhoto.alt);
       const figcaption = document.createElement("figcaption");
-      figcaption.innerHTML = random_photo.caption;
+      figcaption.innerHTML = randomPhoto.caption;
       figure.appendChild(image);
       figure.appendChild(figcaption);
-      document.getElementById("random-photo").appendChild(figure);
+      photoElement.appendChild(figure);
     }
     getRandomPhoto();
   </script>
