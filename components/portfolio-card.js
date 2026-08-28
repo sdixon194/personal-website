@@ -5,7 +5,6 @@ cardTemplate.innerHTML = `
         display: flex;
         flex-direction: column;
         width: 23rem;
-        text-wrap: balance;
         overflow: hidden;
         position: relative;
         height: 40rem;
@@ -14,6 +13,13 @@ cardTemplate.innerHTML = `
         text-wrap: auto;
         filter: drop-shadow(0 0 0.25rem black);
 
+   }
+    
+   @media screen and max-width(400px){
+    .card-component: 
+        {
+            width: 21rem;
+        }
    }
 
     .text-box {

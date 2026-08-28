@@ -2,6 +2,7 @@ html {
   font-size: 1rem;
   font-family: "M PLUS U", sans-serif;
   background-color: #fbf7f3;
+  overflow-x: hidden;
 }
 html,
 body {
@@ -22,7 +23,6 @@ body {
 
 main {
   flex: 1;
-  margin: auto;
 }
 
 .portfolio {
@@ -36,15 +36,26 @@ main {
   margin-top: 0.25rem;
 }
 
-@media screen and (max-width: 500px) {
-  body {
-    width: 100%;
-    padding: 0.25rem;
-  }
-}
 @media screen and (max-width: 1000px) {
   .portfolio {
     width: 100%;
     margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+    padding: 0.5rem;
+  }
+  .portfolio {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 300) {
+  html {
+    font-size: 0.8rem;
   }
 }
